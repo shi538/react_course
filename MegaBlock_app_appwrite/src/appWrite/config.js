@@ -28,7 +28,9 @@ export class Service {
                     featuredImage,
                     status,
                     userId,
-                }
+                },
+              
+
             )
         } catch (error) {
             console.log(error)
@@ -123,10 +125,10 @@ export class Service {
         }
     }
 
-    async getFilePreview(fileId) {
+    getFilePreview(fileId) {
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
-            fileId
+            fileId,
         )
     }
 }

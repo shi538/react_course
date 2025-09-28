@@ -1,5 +1,5 @@
 
-import React, { userId } from 'react'
+import React, { useId } from 'react'
 
 const Input = React.forwardRef(function Input({
     lable,
@@ -7,7 +7,7 @@ const Input = React.forwardRef(function Input({
     className = "",
     ...props
 },ref){
-    const id =userId()
+    const id = useId()
    return(
    <div className='w-full'>
     {
